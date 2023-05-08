@@ -1,0 +1,201 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+body {
+    background: #E5E5E5;
+    height: 100%;
+
+}
+
+.header,
+ul,
+#alert,
+#botones {
+    display: flex;
+    flex-direction: row;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+h1 {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main {
+    margin: 40px 40px 40px 40px;
+}
+
+#logo {
+    width: auto;
+    height: 48px;
+}
+
+
+p,
+h1,
+h3,
+button,
+#input,
+#output {
+    font-family:'Times New Roman', Times, serif;
+    font-style: normal;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-left: 32px;
+    margin-right: 32px;
+    padding: 15px 0;
+    line-height: 120%;
+}
+
+textarea {
+    resize: none;
+    background-color: #E5E5E5;
+}
+
+#input {
+    position: absolute;
+    width: 680px;
+    height: 560px;
+    left: 155px;
+    top: 168px;
+    color: #0A3871;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+.output {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 700px;
+    left: 900px;
+    top: 150px;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+#output {
+    width: 90%;
+    height: 70%;
+    margin-top: 10%;
+    background-color: white;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-weight: 400;
+    font-size: 32px;
+}
+
+#input,
+#output:focus {
+    outline: none;
+    
+}
+
+#output:hover {
+    cursor: default; 
+}
+
+.output-image {
+    background-image: url("imagenes/imagen.png");
+    position: relative;
+    top: -60px;
+}
+
+.output>p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+#alert {
+    margin-bottom: 16px;
+}
+
+#alert>img {
+    width: 16px;
+}
+
+#alert>p {
+    width: 205px;
+    height: 18px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
+}
+
+.botones {
+    margin: 669px 80px 72px 116px;
+    width: fit-content;
+}
+
+button {
+    height: 67px;
+    width: 328px;
+    left: 0px;
+    top: 0px;
+    border-radius: 24px;
+    padding: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+#botones {
+    gap: 24px;
+}
+
+#encriptar {
+    color: white;
+    background-color: #0A3871;
+}
+
+#desencriptar {
+    background-color: #D8DFE8;
+    border: 1px solid #0A3871;
+}
+
+#copiar {
+    background-color: #e3e9f0;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+    position: relative;
+    top: -20px;
+}
+
+#limpiar {
+    color: white;
+    border: 1px solid #0A3871;
+    background-color: #0A3871;
+    position: relative;
+    top: -10px;
+}
+
+.blue-text {
+    color: #0A3871;
+}
+
+button:hover {
+    cursor: pointer;
+}

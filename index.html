@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Challenge Alura-Oracle - Encriptador de Texto</title>
+</head>
+
+<body>
+    <main>
+        <header>
+
+            <div class="header">
+                <img src="imagenes/logo.png" alt="logo" id="logo">
+                <!-- <h1>Challenge Alura-Oracle - Encriptador Textos - KA1LAK</h1>
+                <nav>
+                    <ul>
+                        <li><a href="https://github.com/Ka1laK"><img src="" alt=""></a></li>
+                    </ul>
+                </nav> -->
+            </div>
+
+        </header>
+
+        <textarea name="" id="input" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+        <div class="botones">
+            <div id="alert">
+                <img src="imagenes/alerta.png" alt="">
+                <p>Solo letras minúsculas y sin tildes</p>
+            </div>
+
+            <div id="botones">
+                <button class="button" id="encriptar">Encriptar!</button>
+                <button class="blue-text button" id="desencriptar">Desencriptar!</button>
+            </div>
+        </div>
+        
+
+        <div class="output">
+            <textarea class="output-image" name="" id="output" cols="0" rows="0"></textarea>
+            <h3>Ningún mensaje fue encontrado</h3>
+            <p>Ingrese el texto que desee encriptar o desencriptar</p><br><br><br>
+            <button id="copiar" hidden>Copiar</button>
+            <button class= "button" id="limpiar">Limpiar</button>
+        </div>
+    </main>
+
+    <footer></footer>
+</body>
+<script src="index.js"></script>
+</html>
