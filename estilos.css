@@ -2,35 +2,30 @@
     padding: 0;
     margin: 0;
     border: none;
+    box-sizing: border-box; 
 }
 
 body {
     background: #E5E5E5;
     height: 100%;
-
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.header,
-ul,
-#alert,
-#botones {
+header {
     display: flex;
-    flex-direction: row;
-}
-
-ul,
-li {
-    list-style: none;
-}
-
-h1 {
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 main {
-    margin: 40px 40px 40px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
 }
 
 #logo {
@@ -38,75 +33,44 @@ main {
     height: 48px;
 }
 
-
-p,
-h1,
-h3,
-button,
-#input,
-#output {
-    font-family:'Times New Roman', Times, serif;
-    font-style: normal;
-}
-
-h3 {
-    font-weight: 700;
-    font-size: 24px;
-    margin-top: 20px;
-    margin-left: 32px;
-    margin-right: 32px;
-    padding: 15px 0;
-    line-height: 120%;
-}
-
 textarea {
     resize: none;
     background-color: #E5E5E5;
-}
-
-#input {
-    position: absolute;
-    width: 680px;
-    height: 560px;
-    left: 155px;
-    top: 168px;
+    width: 100%;
+    max-width: 1000px; 
+    height: 300px;
     color: #0A3871;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 16px;
     line-height: 150%;
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
 .output {
-    position: absolute;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 400px;
-    height: 700px;
-    left: 900px;
-    top: 150px;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
     background: #FFFFFF;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
     overflow: hidden;
+    margin-top: 20px;
 }
 
 #output {
-    width: 90%;
-    height: 70%;
-    margin-top: 10%;
+    width: 100%;
+    height: 200px;
     background-color: white;
     background-position-y: 50%;
     background-repeat: no-repeat;
     background-size: contain;
     font-weight: 400;
-    font-size: 32px;
-}
-
-#input,
-#output:focus {
-    outline: none;
-    
+    font-size: 16px;
 }
 
 #output:hover {
@@ -115,27 +79,28 @@ textarea {
 
 .output-image {
     background-image: url("imagenes/imagen.png");
-    position: relative;
-    top: -60px;
+    background-size: cover;
 }
 
-.output>p {
+.output > p {
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
+    text-align: center; /* Centrar el texto */
 }
 
 #alert {
-    margin-bottom: 16px;
+    margin-bottom: 160px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-#alert>img {
+#alert > img {
     width: 16px;
 }
 
-#alert>p {
-    width: 205px;
-    height: 18px;
+#alert > p {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -146,24 +111,22 @@ textarea {
 }
 
 .botones {
-    margin: 669px 80px 72px 116px;
-    width: fit-content;
+    display: flex;
+    flex-direction: row; /* Cambiado a fila */
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 button {
-    height: 67px;
-    width: 328px;
-    left: 0px;
-    top: 0px;
+    height: 50px;
+    width: 100%;
+    max-width: 160px; /* Ajustado el ancho máximo para que los botones sean más pequeños */
     border-radius: 24px;
-    padding: 24px;
+    padding: 10px;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-}
-
-#botones {
-    gap: 24px;
 }
 
 #encriptar {
@@ -180,22 +143,45 @@ button {
     background-color: #e3e9f0;
     border: 1px solid #0A3871;
     color: #0A3871;
-    position: relative;
-    top: -20px;
 }
 
 #limpiar {
     color: white;
     border: 1px solid #0A3871;
     background-color: #0A3871;
-    position: relative;
-    top: -10px;
-}
-
-.blue-text {
-    color: #0A3871;
 }
 
 button:hover {
     cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    textarea, .output {
+        width: 90%;
+        max-width: none;
+    }
+
+    button {
+        width: 45%; /* Ajustado para que los botones ocupen el 45% del contenedor */
+    }
+}
+
+@media (max-width: 600px) {
+    textarea, .output {
+        width: 100%;
+    }
+
+    button {
+        width: 48%; /* Ajustado para que los botones ocupen el 48% del contenedor */
+        font-size: 14px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
 }
